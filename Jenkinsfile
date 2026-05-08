@@ -32,11 +32,11 @@ pipeline{
                 }          
             }
         }
+    }
 
-        post {
-            always {
-                "Hi vedavyas"
-            }
+    post {
+        always {
+            "Hi vedavyas"
         }
     }
 }
