@@ -1,7 +1,5 @@
-/* declarative pipeline */
-
 pipeline{
-    agent 
+    agent any
     stages{
         stage ('Build'){
             steps{
