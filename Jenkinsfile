@@ -8,7 +8,7 @@ pipeline{
         course = "jenkins"
     }
 
-    optione {
+    options {
         disableConcurrentBuilds()
         timeout(time: 30, unit: 'SECONDS')
     }
