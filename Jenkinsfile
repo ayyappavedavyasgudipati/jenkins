@@ -4,12 +4,28 @@ pipeline{
             label 'roboshop'
         }
     }
+    environment {
+        course = "jenkins"
+    }
+
+    optione {
+        disableConcurrentBuilds()
+        timeout{time:15, unit:"SECONDS"}
+    }
+
+    parameters {
+        string(name: 'PERSON', defaultValue: 'vedavyas', description: 'Who to greet?')
+        choice(name: 'ENV', choices: ['Dev', 'Staging', 'Prod'], description: 'Target environment')
+        booleanParam(name: 'DEBUG', defaultValue: true, description: 'Enable debug logs')
+    }
+
     stages{
         stage ('Build'){
             steps{
                 script {
                     sh """
                         echo "this is build stage"
+                        echo "learning $course"
                     """
                 }          
             }
@@ -19,6 +35,7 @@ pipeline{
                 script {
                     sh """
                         echo "this is test stage"
+                        echo "Hello ${params.PERSON} on ${params.ENV}!"
                     """
                 }          
             }
