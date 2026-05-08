@@ -36,8 +36,15 @@ pipeline{
 
     post {
         always {
-            "Hi vedavyas"
+            echo "Hi vedavyas"
         }
+        success {
+            echo "pipeline success"
+        }
+        failure {
+            echo "pipeline failure"
+        }
+        
     }
 }
 
