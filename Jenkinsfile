@@ -66,4 +66,4 @@ pipeline{
 }
 
 
-/* this is very basic level of pipeline where we use declarative + scripted pipeline, options, parameters, environments, agents, webhooks, post  */
+/* this is very basic level of pipeline where we use declarative + scripted pipeline, options, parameters, environments, agents, webhooks, post */
